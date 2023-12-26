@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme:
-            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 255, 0, 0)),
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 0, 255, 0)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Primeiro teste'),
@@ -59,17 +59,18 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               const Text(
                 'Quantidade de vezes que o botão foi precionado',
+                style: TextStyle(color: Color.fromARGB(255, 255, 0, 0), fontSize: 17),
               ),
               Text(
                 '$_counter',
-                style: Theme.of(context).textTheme.headlineMedium,
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
             ],
           ),
         ),
-        floatingActionButton: Column(
+        floatingActionButton: Row(
           mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             FloatingActionButton(
               onPressed: _incrementCounter,
